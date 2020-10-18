@@ -1,0 +1,41 @@
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a href="#"><img src="assets/img/logo2.png" alt="" role="button" width="170" height="38" class="mr-sm-3"></a>
+      <!-- <a class="navbar-brand rounded-pill" href="#" style="background-color: steelblue;">&nbsp;&nbsp;<i class="fas fa-shopping-bag mr-sm-2 fa-lg" style="color: seashell;"></i>E-Commerce &nbsp;</a> -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample07">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" routerLink='home'>Inicio <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Productos</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Categorías
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a *ngFor="let categoria of categorias" class="dropdown-item" href="#">{{categoria.nombre}}</a>
+            </div>
+          </li>
+          <li class="nav-item mr-sm-5">
+            <a class="nav-link" href="#">Ayuda</a>
+          </li>
+          <form class="form-inline my-2 my-md-0">
+            <input class="form-control mr-sm-2 rounded-pill" type="text" placeholder="Buscar productos..." aria-label="Search">
+            <button class="btn btn-success my-2 my-sm-0 mr-sm-2 rounded-circle" type="submit" style="background-color: steelblue; border-color: steelblue;"><i class="fas fa-search"></i></button>
+          </form>
+        </ul>
+        <a href="#"><i class="fas fa-shopping-cart mr-sm-3 fa-lg" role="button" style="color: seashell;" data-toggle="tooltip" data-placement="top" title="Carrito"></i></a>
+        <a href="#"><i class="fas fa-bell mr-sm-3 fa-lg" role="button" style="color: seashell;" data-toggle="tooltip" data-placement="top" title="Notificaciones"></i></a>
+        <a href="#"><i class="fas fa-user fa-lg" role="button" style="color: seashell;" data-toggle="tooltip" data-placement="top" title="Mi perfil"></i></a>
+
+        
+      </div>
+    </div>
+  </nav>
