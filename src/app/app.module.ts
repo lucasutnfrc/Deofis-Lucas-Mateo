@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { FooterComponent } from './components/footer/footer.component';
+import { ProductoComponent } from './components/producto/producto.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FooterComponent } from './components/footer/footer.component';
     NavbarComponent,
     HomeComponent,
     NoimagePipe,
-    FooterComponent
+    FooterComponent,
+    ProductoComponent
   ],
   imports: [
     BrowserModule,

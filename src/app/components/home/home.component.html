@@ -18,16 +18,20 @@
 <h2>Productos destacados: </h2>
 <br>
 <div class="row row-cols-1 row-cols-md-3">
-    <div *ngFor="let destacado of destacados" class="col mb-4">
+    <div *ngFor="let destacado of destacados" class="col mb-4 puntero">
       <div class="card h-100">
         <img [src]="destacado.foto | noimage" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title"><strong>{{destacado.nombre}}</strong></h5>
+          <div class="row" style="margin-left: 1px;">
+            <h5 class="card-title"><strong>{{destacado.nombre}} &nbsp; </strong></h5>
+            <p class="card-text">
+              <span class="badge badge-pill badge-dark"> {{destacado.categoria.nombre}}</span>
+            </p>
+          </div>          
           <p class="card-text">{{destacado.descripcion}} - {{destacado.marca.nombre | uppercase}}</p>
-          <h6>{{destacado.precio | currency}}</h6>
-          <p class="card-text">
-                <span class="badge badge-pill badge-dark" style="border-color: steelblue; background-color: steelblue;">{{destacado.categoria.nombre}}</span>
-          </p>
+          <h5>{{destacado.precio | currency}}</h5>
+          <br>          
+          <a href="#" class="btn btn-block btn-primary btn-sm" style="border-color: steelblue; background-color: steelblue;">Sumar al carrito</a>
         </div>
       </div>
     </div>
